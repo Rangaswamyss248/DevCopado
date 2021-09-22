@@ -3,6 +3,7 @@ trigger AccountAddressTrigger on Account (before insert,before update) {
     {
         if(a.Match_Billing_Address__c==true){
             a.ShippingPostalCode=a.BillingPostalcode;
+            
         }
     }
 
